@@ -1,10 +1,12 @@
+provider "aws" {
+  region = var.aws_region
+}
+
 module "vpc" {
   source = "../Parent_Module"
 
   vpc_configs          = var.vpc_configs
-  region               = var.region
   existing_vpc_ids     = var.existing_vpc_ids
-  
 }
 
 terraform {
