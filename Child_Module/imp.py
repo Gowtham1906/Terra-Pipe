@@ -9,7 +9,7 @@ def get_module_path():
 
 def fetch_vpc_details(vpc_id, variables):
     """Fetch VPC details from AWS using the given VPC ID."""
-    region = variables.get('region', '')  # Get region from variables
+    region = variables.get('aws_region', '')  # Get region from variables
     ec2_client = boto3.client('ec2', region_name=region)
     response = ec2_client.describe_vpcs(VpcIds=[vpc_id])
     
