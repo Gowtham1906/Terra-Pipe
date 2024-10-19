@@ -7,6 +7,7 @@ module "vpc" {
 
   vpc_configs          = var.vpc_configs
   existing_vpc_ids     = var.existing_vpc_ids
+  region               = var.aws_region
 }
 
 terraform {
